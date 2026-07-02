@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunther Birchmeier | Desarrollador Software & Portfolio</title>
+    
+    <!-- SEO Básico -->
+    <meta name="description" content="Portfolio profesional de Gunther Birchmeier, desarrollador de software enfocado en la construcción de productos digitales eficientes, automatización y soluciones escalables.">
+    <meta name="keywords" content="Gunther Birchmeier, Desarrollador, Python, Frontend, Backend, Portafolio, GitHub Pages, Chile">
+    <meta name="author" content="Gunther Birchmeier">
+    
+    <!-- Open Graph para Redes Sociales -->
+    <meta property="og:title" content="Gunther Birchmeier | Portfolio Profesional">
+    <meta property="og:description" content="Descubre mis proyectos destacados, habilidades técnicas y experiencia en desarrollo de software.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/birchmeiershaw-boop">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <!-- Lucide Icons para componentes UI vectoriales -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- ScrollReveal para animaciones fluidas al hacer scroll -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Estilos Custom mínimos para el tema e iluminación de fondo -->
+    <style>
+        body {
+            background-color: #0b071a;
+            color: #f3f4f6;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        .glass-panel {
+            background: rgba(17, 12, 34, 0.65);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #a78bfa 0%, #c084fc 50%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-effect {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(0,0,0,0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="relative overflow-x-hidden selection:bg-purple-500 selection:text-white">
+
+    <!-- Efectos de Iluminación de Fondo Estilo Premium -->
+    <div class="glow-effect top-10 left-[-100px]"></div>
+    <div class="glow-effect top-[40%] right-[-100px]"></div>
+    <div class="glow-effect bottom-20 left-[20%]"></div>
+
+    <!-- HEADER / NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-panel transition-all duration-300 navbar-scrolled">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-wider text-white hover:opacity-80 transition-opacity">
+                GB<span class="text-purple-400">.dev</span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#about" class="hover:text-purple-400 transition-colors">Sobre Mí</a>
+                <a href="#education" class="hover:text-purple-400 transition-colors">Educación</a>
+                <a href="#skills" class="hover:text-purple-400 transition-colors">Tecnologías</a>
+                <a href="#projects" class="hover:text-purple-400 transition-colors">Proyectos</a>
+                <a href="#experience" class="hover:text-purple-400 transition-colors">Experiencia</a>
+                <a href="#contact" class="hover:text-purple-400 transition-colors">Contacto</a>
+            </nav>
+
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="https://github.com/birchmeiershaw-boop" target="_blank" rel="noopener noreferrer" class="p-2 text-gray-400 hover:text-white transition-colors" title="GitHub">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/gunther-birchmeier-shaw" target="_blank" rel="noopener noreferrer" class="p-2 text-gray-400 hover:text-indigo-400 transition-colors" title="LinkedIn">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-300 hover:text-white focus:outline-none" aria-label="Abrir menú">
+                <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-white/5 absolute w-full left-0 px-6 py-6 space-y-4 shadow-xl">
+            <a href="#about" class="mobile-link block text-gray-300 hover:text-purple-400 font-medium">Sobre Mí</a>
+            <a href="#education" class="mobile-link block text-gray-300 hover:text-purple-400 font-medium">Educación</a>
+            <a href="#skills" class="mobile-link block text-gray-300 hover:text-purple-400 font-medium">Tecnologías</a>
+            <a href="#projects" class="mobile-link block text-gray-300 hover:text-purple-400 font-medium">Proyectos</a>
+            <a href="#experience" class="mobile-link block text-gray-300 hover:text-purple-400 font-medium">Experiencia</a>
+            <a href="#contact" class="mobile-link block text-gray-300 hover:text-purple-400 font-medium">Contacto</a>
+            <div class="pt-4 flex space-x-4 border-t border-white/5">
+                <a href="https://github.com/birchmeiershaw-boop" target="_blank" class="text-gray-400 hover:text-white flex items-center space-x-2">
+                    <i data-lucide="github" class="w-5 h-5"></i> <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/gunther-birchmeier-shaw" target="_blank" class="text-gray-400 hover:text-indigo-400 flex items-center space-x-2">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i> <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO PRINCIPAL -->
+    <main class="max-w-7xl mx-auto px-6 pt-32 pb-20 relative z-10">
+        <section id="hero" class="min-h-[80vh] flex flex-col-reverse lg:flex-row items-center justify-between gap-12 py-10">
+            <div class="flex-1 space-y-6 text-center lg:text-left reveal-left">
+                <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-xs font-semibold text-purple-300 tracking-wide uppercase">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Disponible para nuevos desafíos</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-none">
+                    Hola, soy <br class="hidden sm:inline"><span class="text-gradient">Gunther Birchmeier</span>
+                </h1>
+                <p class="text-xl md:text-2xl font-medium text-gray-300">
+                    Desarrollador de Software & Especialista Frontend
+                </p>
+                <p class="text-base md:text-lg text-gray-400 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    Apasionado por transformar lógicas complejas en interfaces refinadas y escalables. Centrado en escribir código limpio y estructurar soluciones tecnológicas con impacto de negocio real.
+                </p>
+                
+                <!-- CTAs -->
+                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#contact" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 font-semibold text-white shadow-lg shadow-purple-900/30 hover:shadow-purple-950/50 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center space-x-2">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                        <span>Contactar Conmigo</span>
+                    </a>
+                    <a href="https://github.com/birchmeiershaw-boop" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl glass-panel hover:bg-white/10 font-semibold text-white border border-white/10 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center space-x-2">
+                        <i data-lucide="github" class="w-4 h-4"></i>
+                        <span>Explorar GitHub</span>
+                    </a>
+                    <a href="#" onclick="alert('Enlace de CV listo para reemplazo de archivo manual')" class="px-5 py-3.5 rounded-xl text-sm font-medium text-gray-400 hover:text-white transition-colors flex items-center space-x-1.5" title="Descargar Currículum">
+                        <i data-lucide="download" class="w-4 h-4"></i>
+                        <span>Descargar CV</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Avatar con Frame tecnológico -->
+            <div class="flex-1 flex justify-center reveal-right">
+                <div class="relative w-64 h-64 sm:w-80 sm:h-80 group">
+                    <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-purple-600 to-indigo-600 blur-2xl opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                    <div class="absolute inset-0 rounded-3xl border-2 border-purple-500/20 group-hover:border-purple-500/40 transition-colors scale-105"></div>
+                    <div class="w-full h-full rounded-3xl glass-panel overflow-hidden relative border border-white/10 flex items-center justify-center">
+                        <!-- Placeholder visual premium si no hay foto cargada -->
+                        <div class="absolute inset-0 bg-gradient-to-b from-purple-950/40 to-slate-950/80 flex flex-col items-center justify-center text-center p-6">
+                            <div class="p-4 rounded-full bg-purple-500/10 mb-3 border border-purple-500/20 text-purple-400">
+                                <i data-lucide="terminal" class="w-12 h-12"></i>
+                            </div>
+                            <span class="text-xs font-mono text-purple-300/70">&lt; Gunther.code /&gt;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-white/5 my-12">
+
+        <!-- SOBRE MÍ -->
+        <section id="about" class="py-16 scroll-mt-24 reveal-up">
+            <div class="max-w-3xl mx-auto text-center space-y-6">
+                <h2 class="text-3xl font-bold tracking-tight text-white">Sobre Mí</h2>
+                <div class="w-12 h-1 bg-purple-500 mx-auto rounded-full"></div>
+                <p class="text-lg text-gray-300 leading-relaxed text-justify sm:text-center">
+                    Soy un profesional enfocado en el desarrollo de software con un profundo interés en la arquitectura de código limpia, metodologías ágiles y la automatización de procesos eficientes. Me destaco por mi enfoque analítico para resolver problemas complejos y mi habilidad para integrarme rápidamente en dinámicas de equipos ágiles.
+                </p>
+                <p class="text-base text-gray-400 text-justify sm:text-center">
+                    Mi flujo de trabajo integra herramientas de control de versiones modernas, modelado técnico estructurado mediante diagramas de clases y patrones de diseño orientados a objetos, asegurando soluciones digitales que no solo se ven elegantes en el frontend, sino que son mantenibles y robustas por detrás.
+                </p>
+            </div>
+        </section>
+
+        <!-- EDUCACIÓN -->
+        <section id="education" class="py-16 scroll-mt-24 reveal-up">
+            <div class="space-y-2 text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-white">Educación & Formación</h2>
+                <p class="text-gray-400">Especializaciones y trayectoria de aprendizaje</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto grid gap-6 md:grid-cols-2">
+                <!-- Card Educativa 1 -->
+                <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group hover:border-purple-500/30 transition-all duration-300">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="p-3 rounded-xl bg-purple-500/10 text-purple-400">
+                            <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs font-semibold text-purple-300/80 px-2.5 py-1 rounded-full bg-white/5 border border-white/5">2026</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white group-hover:text-purple-300 transition-colors">Bootcamp Avanzado de Programación Python</h3>
+                    <p class="text-sm text-gray-400 mt-1">Especialización intensiva en desarrollo de software</p>
+                    <p class="text-sm text-gray-500 mt-4 leading-relaxed">
+                        Enfoque exhaustivo en desarrollo lógico desde cero, profundizando en Programación Orientada a Objetos (POO), herencia, polimorfismo, manejo avanzado de estructuras de datos y modelado técnico de arquitecturas de software eficientes.
+                    </p>
+                </div>
+
+                <!-- Card Educativa 2 -->
+                <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group hover:border-purple-500/30 transition-all duration-300">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="p-3 rounded-xl bg-indigo-500/10 text-indigo-400">
+                            <i data-lucide="award" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs font-semibold text-indigo-300/80 px-2.5 py-1 rounded-full bg-white/5 border border-white/5">Especialización</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors">Metodologías Ágiles & Gestión de Productos</h3>
+                    <p class="text-sm text-gray-400 mt-1">Simulación y Roles de Liderazgo Técnico</p>
+                    <p class="text-sm text-gray-500 mt-4 leading-relaxed">
+                        Formación práctica en dinámicas ágiles (Scrum), asumiendo funciones clave y simulaciones como Product Owner. Experiencia en definición estructurada de requerimientos complejos, historias de usuario, priorización de backlogs de producto y alineación con stakeholders corporativos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECNOLOGÍAS / SKILLS -->
+        <section id="skills" class="py-16 scroll-mt-24 reveal-up">
+            <div class="space-y-2 text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-white">Habilidades Técnicas</h2>
+                <p class="text-gray-400">El stack de herramientas y tecnologías que domino</p>
+            </div>
+
+            <div class="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                <!-- Skill 1 -->
+                <div class="glass-panel p-4 rounded-xl flex items-center space-x-3 hover:bg-white/5 transition-colors">
+                    <div class="w-2 h-2 rounded-full bg-purple-400"></div>
+                    <div>
+                        <p class="text-sm font-semibold text-white">Python</p>
+                        <p class="text-xs text-gray-500">Core & POO Avanzada</p>
+                    </div>
+                </div>
+                <!-- Skill 2 -->
+                <div class="glass-panel p-4 rounded-xl flex items-center space-x-3 hover:bg-white/5 transition-colors">
+                    <div class="w-2 h-2 rounded-full bg-blue-400"></div>
+                    <div>
+                        <p class="text-sm font-semibold text-white">JavaScript</p>
+                        <p class="text-xs text-gray-500">ES6+ & DOM Manipulation</p>
+                    </div>
+                </div>
+                <!-- Skill 3 -->
+                <div class="glass-panel p-4 rounded-xl flex items-center space-x-3 hover:bg-white/5 transition-colors">
+                    <div class="w-2 h-2 rounded-full bg-indigo-400"></div>
+                    <div>
+                        <p class="text-sm font-semibold text-white">HTML5 & CSS3</p>
+                        <p class="text-xs text-gray-500">Diseño Responsive y Semántico</p>
+                    </div>
+                </div>
+                <!-- Skill 4 -->
+                <div class="glass-panel p-4 rounded-xl flex items-center space-x-3 hover:bg-white/5 transition-colors">
+                    <div class="w-2 h-2 rounded-full bg-teal-400"></div>
+                    <div>
+                        <p class="text-sm font-semibold text-white">Tailwind CSS</p>
+                        <p class="text-xs text-gray-500">Maquetación Moderna UI/UX</p>
+                    </div>
+                </div>
+                <!-- Skill 5 -->
+                <div class="glass-panel p-4 rounded-xl flex items-center space-x-3 hover:bg-white/5 transition-colors">
+                    <div class="w-2 h-2 rounded-full bg-amber-400"></div>
+                    <div>
+                        <p class="text-sm font-semibold text-white">Git & GitHub</p>
+                        <p class="text-xs text-gray-500">Control de Versiones Avanzado</p>
+                    </div>
+                </div>
+                <!-- Skill 6 -->
+                <div class="glass-panel p-4 rounded-xl flex items-center space-x-3 hover:bg-white/5 transition-colors">
+                    <div class="w-2 h-2 rounded-full bg-rose-400"></div>
+                    <div>
+                        <p class="text-sm font-semibold text-white">jQuery</p>
+                        <p class="text-xs text-gray-500">Interacción Front Rápida</p>
+                    </div>
+                </div>
+                <!-- Skill 7 -->
+                <div class="glass-panel p-4 rounded-xl flex items-center space-x-3 hover:bg-white/5 transition-colors">
+                    <div class="w-2 h-2 rounded-full bg-cyan-400"></div>
+                    <div>
+                        <p class="text-sm font-semibold text-white">StarUML / Modelamiento</p>
+                        <p class="text-xs text-gray-500">Diseño de Clases y Procesos</p>
+                    </div>
+                </div>
+                <!-- Skill 8 -->
+                <div class="glass-panel p-4 rounded-xl flex items-center space-x-3 hover:bg-white/5 transition-colors">
+                    <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
+                    <div>
+                        <p class="text-sm font-semibold text-white">Agile / Scrum</p>
+                        <p class="text-xs text-gray-500">Product Owner Mentality</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROYECTOS (INTEGRACIÓN DINÁMICA CON GITHUB) -->
+        <section id="projects" class="py-16 scroll-mt-24 reveal-up">
+            <div class="space-y-2 text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-white">Proyectos Destacados</h2>
+                <p class="text-gray-400">Repositorios sincronizados directamente desde mi ecosistema de desarrollo</p>
+            </div>
+
+            <!-- Contenedor dinámico de proyectos JavaScript -->
+            <div id="github-projects-container" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Placeholders de Carga inicial / Respaldo manual en caso de fallback -->
+                <div class="glass-panel p-6 rounded-2xl border border-white/5 flex flex-col justify-between h-64">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <i data-lucide="folder-git-2" class="w-8 h-8 text-purple-400"></i>
+                            <span class="text-xs px-2 py-1 rounded bg-purple-500/10 text-purple-300 font-mono">Python</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">poo_sistema_educacional</h3>
+                        <p class="text-sm text-gray-400 line-clamp-3">Implementación integral de un modelo educativo jerárquico utilizando abstracción profunda, polimorfismo y herencia en Python de manera estructurada.</p>
+                    </div>
+                    <a href="https://github.com/birchmeiershaw-boop" target="_blank" class="text-sm font-medium text-purple-400 hover:text-purple-300 inline-flex items-center space-x-1 mt-4">
+                        <span>Ver repositorio</span> <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl border border-white/5 flex flex-col justify-between h-64">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <i data-lucide="folder-git-2" class="w-8 h-8 text-indigo-400"></i>
+                            <span class="text-xs px-2 py-1 rounded bg-indigo-500/10 text-indigo-300 font-mono">JavaScript / UI</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">e-commerce-agile-simulation</h3>
+                        <p class="text-sm text-gray-400 line-clamp-3">Entorno de simulación de requerimientos técnicos e interfaces dinámicas para cabeceras, pies de página y catálogos de imágenes bajo el rol de Product Owner.</p>
+                    </div>
+                    <a href="https://github.com/birchmeiershaw-boop" target="_blank" class="text-sm font-medium text-indigo-400 hover:text-indigo-300 inline-flex items-center space-x-1 mt-4">
+                        <span>Ver repositorio</span> <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl border border-white/5 flex flex-col justify-between h-64">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <i data-lucide="folder-git-2" class="w-8 h-8 text-pink-400"></i>
+                            <span class="text-xs px-2 py-1 rounded bg-pink-500/10 text-pink-300 font-mono">HTML / jQuery</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">portfolio-premium-landing</h3>
+                        <p class="text-sm text-gray-400 line-clamp-3">Código fuente optimizado para landing pages corporativas y profesionales con diseño responsivo enriquecido y animaciones asíncronas.</p>
+                    </div>
+                    <a href="https://github.com/birchmeiershaw-boop" target="_blank" class="text-sm font-medium text-pink-400 hover:text-pink-300 inline-flex items-center space-x-1 mt-4">
+                        <span>Ver repositorio</span> <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCIA / PERFIL PROFESIONAL -->
+        <section id="experience" class="py-16 scroll-mt-24 reveal-up">
+            <div class="space-y-2 text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-white">Perfil Profesional & Enfoque Corporativo</h2>
+                <p class="text-gray-400">Alineación con objetivos de negocio y toma de decisiones</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto glass-panel p-8 rounded-2xl border border-white/5 space-y-6">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-white/5">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Analista de Proyectos & Selección de Proveedores</h3>
+                        <p class="text-sm text-purple-400 font-medium">Reportes de Alto Impacto para Jefaturas y Liderazgo Corporativo</p>
+                    </div>
+                    <div class="text-left md:text-right">
+                        <span class="text-xs font-mono text-gray-400 block">Enfoque Analítico</span>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 mt-1 inline-block">B2B & Licitaciones</span>
+                    </div>
+                </div>
+
+                <p class="text-gray-300 leading-relaxed text-justify">
+                    Experiencia consolidada estructurando análisis técnicos comparativos y robustos informes corporativos orientados a la alta gerencia o jefaturas directas. Capacitado para evaluar proveedores de servicios industriales y de software, garantizando el cumplimiento normativo estricto y la optimización de recursos económicos y operativos. 
+                </p>
+
+                <div class="grid gap-4 sm:grid-cols-2 pt-2">
+                    <div class="flex items-start space-x-3">
+                        <div class="p-1 rounded bg-purple-500/20 text-purple-400 mt-1">
+                            <i data-lucide="check" class="w-4 h-4"></i>
+                        </div>
+                        <p class="text-sm text-gray-400"><strong class="text-white font-medium">Cumplimiento Legal:</strong> Conocimiento y seguimiento de marcos regulatorios complejos y de protección de datos vigentes (ej. Leyes de protección de datos y licitaciones industriales).</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="p-1 rounded bg-purple-500/20 text-purple-400 mt-1">
+                            <i data-lucide="check" class="w-4 h-4"></i>
+                        </div>
+                        <p class="text-sm text-gray-400"><strong class="text-white font-medium">Visión de Producto:</strong> Habilidad natural para actuar como puente de comunicación nítido entre equipos de desarrollo de código puro e intereses estratégicos comerciales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contact" class="py-16 scroll-mt-24 reveal-up">
+            <div class="max-w-3xl mx-auto glass-panel p-8 sm:p-12 rounded-3xl border border-white/10 text-center space-y-8 relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-tr from-purple-600/5 to-indigo-600/5 pointer-events-none"></div>
+                
+                <div class="space-y-3 relative z-10">
+                    <h2 class="text-3xl font-bold tracking-tight text-white">¿Impulsamos un proyecto juntos?</h2>
+                    <p class="text-gray-400 max-w-xl mx-auto">
+                        Ya sea para incorporarme a tu equipo de desarrollo, evaluar una propuesta tecnológica o discutir soluciones de software robustas. Contáctame directamente.
+                    </p>
+                </div>
+
+                <!-- Botones Rápidos de Contacto Directo -->
+                <div class="grid sm:grid-cols-2 gap-4 max-w-xl mx-auto relative z-10">
+                    <a href="https://wa.me/56957443121?text=Hola%20Gunther,%20vi%20tu%20landing%20portfolio%20y%20me%20gustar%C3%ADa%20conversar%20contigo%20sobre%20una%20oportunidad%20profesional." target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl bg-emerald-600/10 hover:bg-emerald-600/20 border border-emerald-500/30 text-emerald-300 font-semibold transition-all flex items-center justify-center space-x-3 group">
+                        <i data-lucide="message-square" class="w-5 h-5 text-emerald-400 group-hover:scale-110 transition-transform"></i>
+                        <span>WhatsApp Directo</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/gunther-birchmeier-shaw" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl bg-indigo-600/10 hover:bg-indigo-600/20 border border-indigo-500/30 text-indigo-300 font-semibold transition-all flex items-center justify-center space-x-3 group">
+                        <i data-lucide="linkedin" class="w-5 h-5 text-indigo-400 group-hover:scale-110 transition-transform"></i>
+                        <span>Mensaje por LinkedIn</span>
+                    </a>
+                </div>
+
+                <div class="text-xs text-gray-500 pt-4 border-t border-white/5 relative z-10">
+                    Santiago, Región Metropolitana, Chile
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER SOBRIO Y PROFESIONAL -->
+    <footer class="border-t border-white/5 bg-[#070412] relative z-10">
+        <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col sm:flex-row items-center justify-between gap-6 text-sm text-gray-500">
+            <p>&copy; 2026 Gunther Birchmeier. Todos los derechos reservados.</p>
+            <div class="flex space-x-6">
+                <a href="#about" class="hover:text-gray-300 transition-colors">Sobre Mí</a>
+                <a href="#projects" class="hover:text-gray-300 transition-colors">Proyectos</a>
+                <a href="https://github.com/birchmeiershaw-boop" target="_blank" class="hover:text-gray-300 transition-colors">GitHub</a>
+                <a href="https://www.linkedin.com/in/gunther-birchmeier-shaw" target="_blank" class="hover:text-gray-300 transition-colors">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="https://wa.me/56957443121?text=Hola%20Gunther,%20vi%20tu%20landing%20portfolio%20y%20me%20gustar%C3%ADa%20conversar%20contigo%20sobre%20una%20oportunidad%20profesional." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 z-50 p-4 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white shadow-xl shadow-emerald-950/40 hover:scale-110 active:scale-95 transition-all flex items-center justify-center group"
+       title="Contactar por WhatsApp">
+        <i data-lucide="message-circle" class="w-6 h-6"></i>
+        <span class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 ease-out text-sm font-semibold whitespace-nowrap">
+            ¿Conversamos?
+        </span>
+    </a>
+
+    <!-- JAVASCRIPT: LÓGICA DE INTERACCIÓN Y DINAMISMO -->
+    <script>
+        // Inicializar Iconos Lucide
+        lucide.createIcons();
+
+        // Lógica de Navbar Responsive & Scroll Blur
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        const header = document.querySelector('header');
+
+        // Toggle Menú Mobile
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            if (!isHidden) {
+                menuIcon.setAttribute('data-lucide', 'x');
+            } else {
+                menuIcon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        });
+
+        // Cerrar menú mobile al hacer click en algún link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
+        // Efecto scroll sutil sobre la Navbar para dar sensación de solidez glassmorphism
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-2xl', 'bg-opacity-80');
+            } else {
+                header.classList.remove('shadow-2xl', 'bg-opacity-80');
+            }
+        });
+
+        // Inicialización de Animaciones al hacer Scroll (ScrollReveal)
+        ScrollReveal({ 
+            reset: false,
+            distance: '40px',
+            duration: 900,
+            delay: 150
+        });
+
+        ScrollReveal().reveal('.reveal-up', { origin: 'bottom' });
+        ScrollReveal().reveal('.reveal-left', { origin: 'left' });
+        ScrollReveal().reveal('.reveal-right', { origin: 'right' });
+
+        // CONSUMO DINÁMICO DE LA API DE GITHUB
+        // Intenta obtener los repositorios reales del usuario para poblar la sección de manera automatizada.
+        async function loadGitHubProjects() {
+            const username = 'birchmeiershaw-boop';
+            const container = document.getElementById('github-projects-container');
+            
+            try {
+                const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=6`);
+                if (!response.ok) throw new Error('No se pudo conectar a GitHub API');
+                
+                const repos = await response.json();
+                
+                // Si el usuario tiene repositorios públicos, reemplazamos los placeholders estáticos protectores
+                if (repos && repos.length > 0) {
+                    container.innerHTML = ''; // Limpiar contenedor
+                    
+                    repos.forEach(repo => {
+                        // Ignorar bifurcaciones para mostrar solo autoría pura del portafolio
+                        if(repo.fork) return; 
+
+                        const language = repo.language || 'Software';
+                        const description = repo.description || 'Sin descripción disponible actualmente. Haz click abajo para explorar la base de código directamente.';
+                        
+                        const cardHtml = `
+                            <div class="glass-panel p-6 rounded-2xl border border-white/5 flex flex-col justify-between h-64 hover:border-purple-500/30 transition-all duration-300 reveal-up">
+                                <div>
+                                    <div class="flex items-center justify-between mb-4">
+                                        <i data-lucide="folder-git-2" class="w-8 h-8 text-purple-400"></i>
+                                        <span class="text-xs px-2 py-1 rounded bg-purple-500/10 text-purple-300 font-mono">${language}</span>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-white mb-2 truncate">${repo.name}</h3>
+                                    <p class="text-sm text-gray-400 line-clamp-3">${description}</p>
+                                </div>
+                                <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-purple-400 hover:text-purple-300 inline-flex items-center space-x-1 mt-4 group/btn">
+                                    <span>Ver repositorio</span> 
+                                    <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform"></i>
+                                </a>
+                            </div>
+                        `;
+                        container.innerHTML += cardHtml;
+                    });
+                    
+                    // Re-renderizar iconos en los nuevos elementos inyectados dinámicamente
+                    lucide.createIcons();
+                }
+            } catch (error) {
+                console.log('Cargando con repositorios de respaldo estáticos preconfigurados debido a límite de cuotas de API o red offline.');
+            }
+        }
+
+        // Ejecutar carga de proyectos asíncrona tras renderizado inicial exitoso
+        window.addEventListener('DOMContentLoaded', loadGitHubProjects);
+    </script>
+</body>
+</html>
